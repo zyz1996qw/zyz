@@ -1,0 +1,13 @@
+1.计算点与点之间最短路程，Dijkstra算法
+2.打印最短路程走过的路径，即点与点之间的道路
+3.结构体的运用
+	struct Car{
+		int id;
+		int from;
+		int to;
+		int speed;
+		int plantime;
+		}car[10240];
+4.读取txt文件数据，取出的为字符串
+5.提取字符串中的数字或字母或其他
+6.linux和windos下的不同，string carpath="/home/zyz/1-map-training-1/car.txt";ifstream ifs(carpath);在windos下编译成功，在linux下报错，查找原因为ifstream ifs()  c++的string类无法作为参数，解决方案：使用c的字符串char xx[100];strcpy(xx,"1.txt");ifstream ifs(xx);如果字符串已经定义过string s=“1.txt”，不能直接strcpy(xx,s),要strcpy(qw,s.c_str());c_str是为了与c语言兼容，在c语言中没有string类型，所以必须通过string类对象中的成员函数c_str()把string对象转换成c中的字符串样式。
